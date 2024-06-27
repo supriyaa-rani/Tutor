@@ -36,3 +36,45 @@ const scroll = new LocomotiveScroll({
     el: document.querySelector('.main'),
     smooth: true
 });
+
+const values = document.querySelectorAll('.val-1');
+// const interval = 3000;/////////////////////////////////////////////connected
+
+values.forEach((val)=>{
+  let startVal = 0;
+  let endVal = parseInt(val.getAttribute('data-count'));
+
+  // let endVal = values.dataset.count
+  // let duration = Math.floor(interval/endVal);///////////////////////////////connected
+
+  let counter = setInterval(function(){
+    startVal += 1;
+    val.textContent = startVal;
+
+    // if (startVal < 1000) {
+    //   startVal += 5
+    //   values.innerText = startVal
+    // }
+
+    // if (startVal >= 1000) {
+    //   startVal += 100
+    //   values.innerText = startVal 
+    // }
+
+    if(startVal == endVal){
+      clearInterval(counter);
+    }
+  }, 2)
+
+  // const counting = setInterval(updateCounting,1);
+
+  // function updateCounting() {
+  //   startVal += 1;
+  //   values.innerText = startVal
+
+  //   if (startVal >= endVal) {
+  //     clearInterval(counting)
+    // }
+  // }
+})
+
