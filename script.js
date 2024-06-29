@@ -78,3 +78,67 @@ values.forEach((val)=>{
   // }
 })
 
+// gsap
+
+gsap.from(".yellow-sec h5",{
+  scale:0,
+  opacity:0,
+  duration:3,
+  scrollTrigger:{
+    trigger: '.yellow-sec',
+    scroller: '.main',
+    // markers: true,
+    start:"top 10%",
+    end: "top 0%",
+    scrub: true
+  }
+})
+
+gsap.from(".page1-content-right img",{
+  opacity:0,
+  scale: 0.8,
+  duration:2,
+})
+
+gsap.from(".boxes1",{
+  opacity:0,
+  scale: 0.8,
+  duration:3,
+  scrollTrigger:{
+    trigger: ".boxes1",
+    scroller: ".main",
+    // markers: true,
+    start: "top 70%",
+    end: "top 50%",
+    scrub: true,
+  }
+})
+
+gsap.from('.page2-content>img:nth-child(2)', {
+  scale: 2,
+  opacity: 0,
+  scrollTrigger:{
+    trigger: '.page2-content>img:nth-child(2)',
+    scroller: '.main',
+    // markers: true,
+    start: 'top 65%',
+    end: 'top 40%',
+    scrub: true,
+  }
+})
+
+
+gsap.from(".egg1",{
+  opacity:0,
+  scale: 0.8,
+  duration:3,
+  scrollTrigger:{
+    trigger: ".egg1",
+    scroller: ".main",
+    markers: true,
+    start: "top 85%",
+    end: "top 50%",
+    scrub: true,
+  }
+})
+
